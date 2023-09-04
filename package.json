@@ -1,7 +1,7 @@
 {
-  "name": "ol-geocoder",
-  "version": "4.2.1",
-  "description": "A geocoder extension compatible with OpenLayers v7+ & v8+",
+  "name": "@myol/geocoder",
+  "version": "4.2.12",
+  "description": "DEVELOPMENT : DON'T USE",
   "author": "Jonatas Walker",
   "homepage": "https://github.com/Dominique92/ol-geocoder",
   "license": "MIT",
@@ -14,7 +14,9 @@
     "url": "https://github.com/Dominique92/ol-geocoder/issues"
   },
   "files": [
-    "dist/"
+    "dist/",
+    "konstants/",
+    "src/"
   ],
   "browserslist": [
     "defaults"

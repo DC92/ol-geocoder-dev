@@ -7,12 +7,10 @@ I would like to thank them and the entire development team for the fantastic wor
 # OpenLayers Control Geocoder
 <p align="center">
   <a href="https://www.npmjs.com/package/ol-geocoder">
-    <img src="https://img.shields.io/npm/v/ol-geocoder.svg"
-      alt="npm version">
+    <img src="https://img.shields.io/npm/v/ol-geocoder.svg" alt="npm version">
   </a>
   <a href="https://github.com/Dominique92/ol-geocoder/blob/master/LICENSE">
-    <img src="https://img.shields.io/npm/l/ol-geocoder.svg"
-      alt="license">
+    <img src="https://img.shields.io/npm/l/ol-geocoder.svg" alt="license">
   </a>
 </p>
 
@@ -39,14 +37,12 @@ For an example of defining and using a custom provider see [`examples/custom-pro
 Custom providers must implement the following methods:
 
 #### `getParameters(options)`
-
 * `options` `{Object}`
     * `query` Search string entered by the user;
     * `lang` `{string}` Preferable language;
     * `limit` `{number}` Limit of results;
 
 #### `handleResponse(results)`
-
 * `results` `{Object}` Parsed JSON response from API call
 
 ## How to use it?
@@ -54,18 +50,25 @@ Custom providers must implement the following methods:
 ##### NPM
 `npm install ol-geocoder`
 
-##### CDN Hosted - [jsDelivr](https://www.jsdelivr.com/package/npm/ol-geocoder)
+##### CDN hosted - [jsDelivr](https://www.jsdelivr.com/package/npm/ol-geocoder)
 Load CSS and Javascript:
 ```HTML
 <link href="https://cdn.jsdelivr.net/npm/ol-geocoder@latest/dist/ol-geocoder.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/ol-geocoder"></script>
 ```
 
-##### CDN Hosted - UNPKG
+##### CDN hosted - unpkg
 Load CSS and Javascript:
 ```HTML
 <link href="https://unpkg.com/ol-geocoder/dist/ol-geocoder.min.css" rel="stylesheet">
 <script src="https://unpkg.com/ol-geocoder"></script>
+```
+
+##### Github pages hosted
+Load CSS and Javascript:
+```HTML
+<link rel="stylesheet" href="http://dominique92.github.io/ol-geocoder/dist/ol-geocoder.css">
+<script src="http://dominique92.github.io/ol-geocoder/dist/ol-geocoder-debug.js"></script>
 ```
 
 ##### Self hosted
@@ -109,9 +112,6 @@ geocoder.on('addresschosen', (evt) => {
   * `provider`             : `'osm'` (default), `'mapquest'`, `'photon'`, `'pelias'`, `'bing'`, `'opencage'`, custom provider instance; Your preferable provider;
   * `url`                  : `'https://nominatim.openstreetmap.org/search''`; API provider url;
   * `key`                  : `''`; API Key if required;
-  * `autoComplete`         : `false`; Search as you type;
-  * `autoCompleteMinLength`: `2`; The minimum number of characters to trigger search;
-  * `autoCompleteTimeout`  : `200`; The mimimum number of ms to wait before triggering search if autoComplete is on and minimum number of characters is satisfied;
   * `placeholder`          : `'Search for an address'`; Placeholder for text input;
   * `targetType`           : `'glass-button'`; Can also be `'text-input'`;
   * `featureStyle`         : `ol.style.Style`; Feature style;
