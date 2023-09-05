@@ -14,7 +14,7 @@ I would like to thank them and the entire development team for the fantastic wor
   </a>
 </p>
 
-A geocoder extension compatible with OpenLayers v7. **Requires** OpenLayers **v6.15.0** or higher.
+A geocoder extension compatible with OpenLayers v7 & v8 (Tested with all versions from v6.15.1 to v8.0.0).
 
 ![geocoder anim](https://raw.githubusercontent.com/Dominique92/ol-geocoder/screenshots/images/anim.gif)
 ## Demo

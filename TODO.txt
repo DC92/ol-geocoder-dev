@@ -1,0 +1,45 @@
+NPM delivery
+https://docs.npmjs.com/creating-and-publishing-scoped-public-packages
+npm init --scope=@dom92
+npm adduser myol
+npm whoami
+npm publish --access public
+
+TODO npm delivery
+Petits logos / vérifier version ?
+You can see here a demo or on jsFiddle if you prefer
+
+package.json
+  "name": "ol-geocoder",
+  "version": "4.3.0",
+  "description": "A geocoder extension compatible with OpenLayers v7+ & v8+",
+
+TODO
+Use unicode char for the button
+Use myol style unicode button)
+ajouter ~ devant import ('...css')
+add defaults values in konstants/index.js
+détruire compte gravatar
+mettre version et nom module dans la banner à partir du package
+test 6.15.1 avec hosted div
+
+
+##### Import in a nodejs project
+```javascript
+// Import CSS and Javascript
+import '../dist/ol-geocoder.css';
+import Geocoder from '../src/base';
+
+const geocoder = new Geocoder('nominatim', {...});
+```
+See this [example](https://dominique92.github.io/ol-geocoder/examples/nodejs.html).
+
+npm init @eslint/config
+fichier .eslintrc.cjs
+  settings: {
+    react: {
+     version: "detect",
+    },
+  },
+npm i react
+npx eslint src/*/*.js
