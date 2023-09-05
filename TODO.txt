@@ -12,6 +12,7 @@ package.json
   "description": "A geocoder extension compatible with OpenLayers v7+ & v8+",
 
 TODO
+npmjs.com icon npm reste à la version 4.2.0
 Use unicode char for the button
 Use myol style unicode button)
 ajouter ~ devant import ('...css')
