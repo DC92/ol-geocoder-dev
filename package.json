@@ -14,9 +14,7 @@
     "url": "https://github.com/Dominique92/ol-geocoder/issues"
   },
   "files": [
-    "dist/",
-    "konstants/",
-    "src/"
+    "dist/"
   ],
   "browserslist": [
     "defaults"

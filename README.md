@@ -17,8 +17,11 @@ I would like to thank them and the entire development team for the fantastic wor
 A geocoder extension compatible with OpenLayers v7 & v8 (Tested with all versions from v6.15.1 to v8.0.0).
 
 ![geocoder anim](https://raw.githubusercontent.com/Dominique92/ol-geocoder/screenshots/images/anim.gif)
+
 ## Demo
-You can see [here a demo](http://rawgit.com/jonataswalker/ol-geocoder/master/examples/control-nominatim.html) or on [jsFiddle](http://jsfiddle.net/jonataswalker/c4qv9afb/) if you prefer. There is also a [demo of creating a custom provider](http://rawgit.com/jonataswalker/ol-geocoder/master/examples/custom-provider.html)
+You can see [here a demo](http://rawgit.com/Dominique92/ol-geocoder/master/examples/control-nominatim.html)
+or on [jsFiddle](http://jsfiddle.net/Dominique92/c4qv9afb/) if you prefer.
+There is also a [demo of creating a custom provider](http://rawgit.com/Dominique92/ol-geocoder/master/examples/custom-provider.html)
 
 ## Providers
 The plugin supports (for now) the following providers:
