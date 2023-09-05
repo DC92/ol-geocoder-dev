@@ -1,8 +1,8 @@
 /*!
- * ol-geocoder - v4.3.0
- * A geocoder extension compatible with OpenLayers v7+ & v8+
+ * @myol/geocoder - v4.2.12
+ * DEVELOPMENT : DON'T USE
  * https://github.com/Dominique92/ol-geocoder
- * Built: Tue Sep 05 2023 18:48:23 GMT+0200 (heure d’été d’Europe centrale)
+ * Built: Tue Sep 05 2023 20:25:35 GMT+0200 (heure d’été d’Europe centrale)
  */
  
  

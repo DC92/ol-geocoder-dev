@@ -19,9 +19,9 @@ A geocoder extension compatible with OpenLayers v7 & v8 (Tested with all version
 ![geocoder anim](https://raw.githubusercontent.com/Dominique92/ol-geocoder/screenshots/images/anim.gif)
 
 ## Demo
-You can see [here a demo](http://rawgit.com/Dominique92/ol-geocoder/master/examples/control-nominatim.html)
+You can see [here a demo](http://dominique92.github.io/ol-geocoder/examples/control-nominatim.html)
 or on [jsFiddle](http://jsfiddle.net/Dominique92/c4qv9afb/) if you prefer.
-There is also a [demo of creating a custom provider](http://rawgit.com/Dominique92/ol-geocoder/master/examples/custom-provider.html)
+There is also a [demo of creating a custom provider](http://dominique92.github.io/ol-geocoder/examples/custom-provider.html)
 
 ## Providers
 The plugin supports (for now) the following providers:
@@ -48,8 +48,21 @@ Custom providers must implement the following methods:
 #### `handleResponse(results)`
 * `results` `{Object}` Parsed JSON response from API call
 
-## How to use it?
-
+## What's new in 4.3.0 ?
+* search form outside map https://github.com/Dominique92/ol-geocoder/issues/87
+* Geocoder does not zoom to the location correctly https://github.com/Dominique92/ol-geocoder/issues/228
+* ol-geocoder results are too much zoomed -in https://github.com/Dominique92/ol-geocoder/issues/235
+* Toggle Marker in Options https://github.com/Dominique92/ol-geocoder/issues/239
+* Using Search Function Outside Div https://github.com/Dominique92/ol-geocoder/issues/247
+* Search Button - search does not work from smartphone if there is another text field https://github.com/Dominique92/ol-geocoder/issues/255
+* Remove search layer from legend https://github.com/Dominique92/ol-geocoder/issues/256
+* Limit search result to extent https://github.com/Dominique92/ol-geocoder/issues/260
+* Allow custom URL for osm provider https://github.com/Dominique92/ol-geocoder/issues/266
+* Init error on 4.2.0 https://github.com/Dominique92/ol-geocoder/issues/270
+* src/nominating.js better import on 4.2.0 https://github.com/Dominique92/ol-geocoder/issues/271
+* Error on bbox returned by nominatim.js 4.2.0 on Openlayers 7.4.0+ https://github.com/Dominique92/ol-geocoder/issues/272
+* fix(examples): map height and width were 0px for custom provider https://github.com/Dominique92/ol-geocoder/issues/276
+ 
 ##### NPM
 `npm install ol-geocoder`
 

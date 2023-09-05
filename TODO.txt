@@ -6,9 +6,6 @@ npm whoami
 npm publish --access public
 
 TODO npm delivery
-Petits logos / vérifier version ?
-You can see here a demo or on jsFiddle if you prefer
-
 package.json
   "name": "ol-geocoder",
   "version": "4.3.0",
@@ -18,11 +15,8 @@ TODO
 Use unicode char for the button
 Use myol style unicode button)
 ajouter ~ devant import ('...css')
-add defaults values in konstants/index.js
-détruire compte gravatar
 mettre version et nom module dans la banner à partir du package
 test 6.15.1 avec hosted div
-
 
 ##### Import in a nodejs project
 ```javascript
