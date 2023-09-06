@@ -15,6 +15,7 @@ const geocoder = new Geocoder('nominatim', {
   provider: 'osm',
   targetType: 'text-input',
   lang: 'en',
+  label: 'Find a location by name',
   placeholder: 'Search in nominatim/OSM',
   limit: 5,
   keepOpen: false,

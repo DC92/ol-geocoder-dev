@@ -1,8 +1,8 @@
 /*!
- * @myol/geocoder - v4.2.12
+ * @myol/geocoder - v4.2.14
  * DEVELOPMENT : DON'T USE
  * https://github.com/Dominique92/ol-geocoder
- * Built: Tue Sep 05 2023 20:25:37 GMT+0200 (heure d’été d’Europe centrale)
+ * Built: Wed Sep 06 2023 19:58:43 GMT+0200 (heure d’été d’Europe centrale)
  */
  
  .ol-touch .ol-control.gcd-gl-control button {
@@ -136,6 +136,11 @@
   border: 1px solid #ccc;
   background-color: #fff;
   overflow: hidden; }
+
+.ol-geocoder .gcd-txt-label {
+  display: inline-block;
+  width: 100%;
+  text-align: center; }
 
 .ol-geocoder .gcd-txt-input {
   position: absolute;

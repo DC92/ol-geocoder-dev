@@ -8,15 +8,19 @@ npm publish --access public
 TODO npm delivery
 package.json
   "name": "ol-geocoder",
-  "version": "4.3.0",
+  "version": "4.3.1",
   "description": "A geocoder extension compatible with OpenLayers v7+ & v8+",
+remove
+    "konstants",
+    "src",
 
 TODO
-npmjs.com icon npm reste à la version 4.2.0
 Use unicode char for the button
-Use myol style unicode button)
+Use myol style (unicode button)
+
+KO
+include scss in node.js
 ajouter ~ devant import ('...css')
-mettre version et nom module dans la banner à partir du package
 test 6.15.1 avec hosted div
 
 ##### Import in a nodejs project

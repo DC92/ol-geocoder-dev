@@ -14,6 +14,8 @@
     "url": "https://github.com/Dominique92/ol-geocoder/issues"
   },
   "files": [
+    "konstants",
+    "src",
     "dist/"
   ],
   "browserslist": [
@@ -53,7 +55,6 @@
     "@rollup/plugin-node-resolve": "^11.2.1",
     "autoprefixer": "^10.4.13",
     "babel-jest": "^29.0.3",
-    "js-beautify": "latest",
     "boxen": "^5.1.2",
     "bytes": "^3.1.2",
     "canvas": "^2.10.2",
@@ -71,6 +72,7 @@
     "husky": "^4.3.8",
     "jest": "^29.3.1",
     "jest-environment-jsdom": "^29.3.1",
+    "js-beautify": "latest",
     "node-sass": "^8.0.0",
     "node-sass-json-importer": "^4.3.0",
     "npm-run-all": "^4.1.5",

@@ -1,8 +1,8 @@
 /*!
- * @myol/geocoder - v4.2.12
+ * @myol/geocoder - v4.2.14
  * DEVELOPMENT : DON'T USE
  * https://github.com/Dominique92/ol-geocoder
- * Built: Tue Sep 05 2023 20:25:35 GMT+0200 (heure d’été d’Europe centrale)
+ * Built: Wed Sep 06 2023 19:58:41 GMT+0200 (heure d’été d’Europe centrale)
  */
  
  
@@ -44,6 +44,7 @@
   var containerId = "gcd-container";
   var buttonControlId = "gcd-button-control";
   var inputQueryId = "gcd-input-query";
+  var inputLabelId = "gcd-input-label";
   var inputSearchId = "gcd-input-search";
   var cssClasses = {
   	namespace: "ol-geocoder",
@@ -66,6 +67,7 @@
   	inputText: {
   		container: "gcd-txt-container",
   		control: "gcd-txt-control",
+  		label: "gcd-txt-label",
   		input: "gcd-txt-input",
   		search: "gcd-txt-search",
   		icon: "gcd-txt-glass",
@@ -76,6 +78,7 @@
   	containerId: containerId,
   	buttonControlId: buttonControlId,
   	inputQueryId: inputQueryId,
+  	inputLabelId: inputLabelId,
   	inputSearchId: inputSearchId,
   	cssClasses: cssClasses
   };
@@ -85,6 +88,7 @@
     containerId: containerId,
     buttonControlId: buttonControlId,
     inputQueryId: inputQueryId,
+    inputLabelId: inputLabelId,
     inputSearchId: inputSearchId,
     cssClasses: cssClasses,
     'default': vars
@@ -376,10 +380,12 @@
         elements = {
           container,
           control: container.querySelector(`.${klasses$1.inputText.control}`),
+          label: container.querySelector(`.${klasses$1.inputText.label}`),
           input: container.querySelector(`.${klasses$1.inputText.input}`),
           search: container.querySelector(`.${klasses$1.inputText.search}`),
           result: container.querySelector(`.${klasses$1.inputText.result}`),
         };
+        elements.label.innerHTML = this.options.label;
       } else {
         containerClass = `${klasses$1.namespace} ${klasses$1.glass.container}`;
         container = createElement(
@@ -417,7 +423,8 @@
 
   Html.input = `
   <div class="${klasses$1.inputText.control}">
-    <input type="text" id="${VARS.inputQueryId}" class="${klasses$1.inputText.input}" autocomplete="off" placeholder="Search ...">
+    <label type="button" id="${VARS.inputSearchId}" class="${klasses$1.inputText.label}"></label>
+    <input type="text" id="${VARS.inputQueryId}" class="${klasses$1.inputText.input}" autocomplete="off" placeholder="SeaAAAAArch ...">
     <span class="${klasses$1.inputText.icon}"></span>
     <button type="button" id="${VARS.inputSearchId}" class="${klasses$1.inputText.search} ${klasses$1.hidden}"></button>
   </div>

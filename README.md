@@ -1,8 +1,7 @@
 # Maintenance takeover
-While [@jonataswalker](https://github.com/jonataswalker) & [@kirtan-desai](https://github.com/kirtan-desai)
-ask for a new maintainer, I will assume the ol-geocoder support.
+While @jonataswalker & @kirtandesai ask for a new maintainer, I will assume the ol-geocoder support.
 I would like to thank them and the entire development team for the fantastic work done so far.
-[@dominque](https://github.com/Dominique92).
+@Dominque92.
 
 # OpenLayers Control Geocoder
 <p align="center">
@@ -47,21 +46,6 @@ Custom providers must implement the following methods:
 
 #### `handleResponse(results)`
 * `results` `{Object}` Parsed JSON response from API call
-
-## What's new in 4.3.0 ?
-* search form outside map [#87](https://github.com/Dominique92/ol-geocoder/issues/87)
-* Geocoder does not zoom to the location correctly [#228](https://github.com/Dominique92/ol-geocoder/issues/228)
-* ol-geocoder results are too much zoomed -in [#235](https://github.com/Dominique92/ol-geocoder/issues/235)
-* Toggle Marker in Options [#239](https://github.com/Dominique92/ol-geocoder/issues/239)
-* Using Search Function Outside Div [#247](https://github.com/Dominique92/ol-geocoder/issues/247)
-* Search Button - search does not work from smartphone if there is another text field [#255](https://github.com/Dominique92/ol-geocoder/issues/255)
-* Remove search layer from legend [#256](https://github.com/Dominique92/ol-geocoder/issues/256)
-* Limit search result to extent [#260](https://github.com/Dominique92/ol-geocoder/issues/260)
-* Allow custom URL for osm provider [#266](https://github.com/Dominique92/ol-geocoder/issues/266)
-* Init error on 4.2.0 [#270](https://github.com/Dominique92/ol-geocoder/issues/270)
-* src/nominating.js better import on 4.2.0 [#271](https://github.com/Dominique92/ol-geocoder/issues/271)
-* Error on bbox returned by nominatim.js 4.2.0 on Openlayers 7.4.0+ [#272](https://github.com/Dominique92/ol-geocoder/issues/272)
-* fix(examples): map height and width were 0px for custom provider [#276](https://github.com/Dominique92/ol-geocoder/issues/276)
  
 ##### NPM
 `npm install ol-geocoder`
@@ -70,14 +54,14 @@ Custom providers must implement the following methods:
 Load CSS and Javascript:
 ```HTML
 <link href="https://cdn.jsdelivr.net/npm/ol-geocoder@latest/dist/ol-geocoder.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/ol-geocoder"></script>
+<script src="https://cdn.jsdelivr.net/npm/ol-geocoder/dist/ol-geocoder.js"></script>
 ```
 
 ##### CDN hosted - unpkg
 Load CSS and Javascript:
 ```HTML
 <link href="https://unpkg.com/ol-geocoder/dist/ol-geocoder.min.css" rel="stylesheet">
-<script src="https://unpkg.com/ol-geocoder"></script>
+<script src="https://unpkg.com/ol-geocoder/dist/ol-geocoder.js"></script>
 ```
 
 ##### Github pages hosted
