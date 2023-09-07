@@ -112,6 +112,7 @@ geocoder.on('addresschosen', (evt) => {
   * `provider`             : `'osm'` (default), `'mapquest'`, `'photon'`, `'pelias'`, `'bing'`, `'opencage'`, custom provider instance; Your preferable provider;
   * `url`                  : `'https://nominatim.openstreetmap.org/search''`; API provider url;
   * `key`                  : `''`; API Key if required;
+  * `label`                : `label to be display in the top of the input div;
   * `placeholder`          : `'Search for an address'`; Placeholder for text input;
   * `targetType`           : `'glass-button'`; Can also be `'text-input'`;
   * `featureStyle`         : `ol.style.Style`; Feature style;

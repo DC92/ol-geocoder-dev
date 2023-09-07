@@ -12,7 +12,7 @@ const klasses = VARS.cssClasses;
 /**
  * @class Html
  */
-export class Html {
+export default class Html {
   /**
    * @constructor
    * @param {object} options Options.
@@ -23,9 +23,9 @@ export class Html {
   }
 
   createControl() {
-    let container;
-    let containerClass;
-    let elements;
+    let container,
+      containerClass,
+      elements;
 
     if (this.options.targetType === TARGET_TYPE.INPUT) {
       containerClass = `${klasses.namespace} ${klasses.inputText.container}`;

@@ -2,7 +2,7 @@
  * @myol/geocoder - v4.2.14
  * DEVELOPMENT : DON'T USE
  * https://github.com/Dominique92/ol-geocoder
- * Built: Wed Sep 06 2023 19:58:41 GMT+0200 (heure d’été d’Europe centrale)
+ * Built: Thu Sep 07 2023 11:19:49 GMT+0200 (heure d’été d’Europe centrale)
  */
  
  
@@ -122,6 +122,7 @@
 
   const DEFAULT_OPTIONS = {
     provider: PROVIDERS.OSM,
+    label: '',
     placeholder: 'Search for an address',
     featureStyle: null,
     targetType: TARGET_TYPE.GLASS,
@@ -140,24 +141,6 @@
    * obj2's if non existent in obj1
    * @returns obj3 a new object based on obj1 and obj2
    */
-  function mergeOptions(obj1, obj2) {
-    const obj3 = {};
-
-    Object.keys(obj1).forEach((key) => {
-      if (Object.prototype.hasOwnProperty.call(obj1, key)) {
-        obj3[key] = obj1[key];
-      }
-    });
-
-    Object.keys(obj2).forEach((key) => {
-      if (Object.prototype.hasOwnProperty.call(obj2, key)) {
-        obj3[key] = obj2[key];
-      }
-    });
-
-    return obj3;
-  }
-
   function assert(condition, message = 'Assertion failed') {
     if (!condition) {
       if (typeof Error !== 'undefined') throw new Error(message);
@@ -364,9 +347,9 @@
     }
 
     createControl() {
-      let container;
-      let containerClass;
-      let elements;
+      let container,
+        containerClass,
+        elements;
 
       if (this.options.targetType === TARGET_TYPE.INPUT) {
         containerClass = `${klasses$1.namespace} ${klasses$1.inputText.container}`;
@@ -961,26 +944,28 @@
         switch (this.options.provider) {
           case PROVIDERS.OSM:
             addressHtml = `<span class="${klasses.road}">${row.address.name}</span>`;
-
             break;
 
           default:
             addressHtml = this.addressTemplate(row.address);
         }
 
-        const html = `<a href="#">${addressHtml}</a>`;
-        const li = createElement('li', html);
+        if (response.length == 1) {
+          this.chosen(row, addressHtml, row.address, row.original);
+        } else {
+          const li = createElement('li', `<a href="#">${addressHtml}</a>`);
 
-        li.addEventListener(
-          'click',
-          (evt) => {
-            evt.preventDefault();
-            this.chosen(row, addressHtml, row.address, row.original);
-          },
-          false
-        );
+          li.addEventListener(
+            'click',
+            (evt) => {
+              evt.preventDefault();
+              this.chosen(row, addressHtml, row.address, row.original);
+            },
+            false
+          );
 
-        ul.append(li);
+          ul.append(li);
+        }
       });
     }
 
@@ -1177,27 +1162,29 @@
      * @param {string} type nominatim|reverse.
      * @param {object} options Options.
      */
-    constructor(type = CONTROL_TYPE.NOMINATIM, options = {}) {
+    constructor(type = CONTROL_TYPE.NOMINATIM, options) {
       assert(typeof type === 'string', '@param `type` should be string!');
       assert(
         type === CONTROL_TYPE.NOMINATIM || type === CONTROL_TYPE.REVERSE,
         `@param 'type' should be '${CONTROL_TYPE.NOMINATIM}'
       or '${CONTROL_TYPE.REVERSE}'!`
       );
-      assert(typeof options === 'object', '@param `options` should be object!');
 
-      DEFAULT_OPTIONS.featureStyle = [
-        new Style__default["default"]({
-          image: new Icon__default["default"]({
-            scale: 0.7,
-            src: FEATURE_SRC
-          })
-        }),
-      ];
+      options = {
+        ...DEFAULT_OPTIONS,
+        featureStyle: [
+          new Style__default["default"]({
+            image: new Icon__default["default"]({
+              scale: 0.7,
+              src: FEATURE_SRC
+            })
+          }),
+        ],
+        ...options,
+      };
 
-      let container;
-
-      let $nominatim;
+      let container,
+        $nominatim;
 
       const $html = new Html(options);
 
@@ -1212,7 +1199,7 @@
 
       if (!(this instanceof Base)) return new Base();
 
-      this.options = mergeOptions(DEFAULT_OPTIONS, options);
+      this.options = options;
       this.container = container;
 
       if (type === CONTROL_TYPE.NOMINATIM) {

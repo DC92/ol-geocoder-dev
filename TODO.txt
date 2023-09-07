@@ -17,6 +17,10 @@ remove
 TODO
 Use unicode char for the button
 Use myol style (unicode button)
+lint installé / compléter
+tests / compléter
+enlever sass
+examples/nodejs.html import ol ?
 
 KO
 include scss in node.js

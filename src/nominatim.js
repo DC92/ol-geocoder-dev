@@ -36,7 +36,7 @@ const klasses = VARS.cssClasses;
 /**
  * @class Nominatim
  */
-export class Nominatim {
+export default class Nominatim {
   /**
    * @constructor
    * @param {Function} base Base class.
@@ -176,26 +176,28 @@ export class Nominatim {
       switch (this.options.provider) {
         case PROVIDERS.OSM:
           addressHtml = `<span class="${klasses.road}">${row.address.name}</span>`;
-
           break;
 
         default:
           addressHtml = this.addressTemplate(row.address);
       }
 
-      const html = `<a href="#">${addressHtml}</a>`;
-      const li = createElement('li', html);
+      if (response.length == 1) {
+        this.chosen(row, addressHtml, row.address, row.original);
+      } else {
+        const li = createElement('li', `<a href="#">${addressHtml}</a>`);
 
-      li.addEventListener(
-        'click',
-        (evt) => {
-          evt.preventDefault();
-          this.chosen(row, addressHtml, row.address, row.original);
-        },
-        false
-      );
+        li.addEventListener(
+          'click',
+          (evt) => {
+            evt.preventDefault();
+            this.chosen(row, addressHtml, row.address, row.original);
+          },
+          false
+        );
 
-      ul.append(li);
+        ul.append(li);
+      }
     });
   }
 
