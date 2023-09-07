@@ -38,6 +38,11 @@ For an example of defining and using a custom provider see [`examples/custom-pro
 
 Custom providers must implement the following methods:
 
+## What's new in 4.3.1 ?
+* Add option for HTML label [#198](https://github.com/Dominique92/ol-geocoder/issues/198)
+* Is there a way to get keyboard return event to pick top choice in dropdown? [#206](https://github.com/Dominique92/ol-geocoder/issues/206)
+* #198 test [#198]
+
 #### `getParameters(options)`
 * `options` `{Object}`
     * `query` Search string entered by the user;
