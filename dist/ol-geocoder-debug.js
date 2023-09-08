@@ -1,8 +1,8 @@
 /*!
- * @myol/geocoder - v4.2.14
+ * @myol/geocoder - v4.2.15
  * DEVELOPMENT : DON'T USE
  * https://github.com/Dominique92/ol-geocoder
- * Built: Thu Sep 07 2023 13:44:47 GMT+0200 (heure d’été d’Europe centrale)
+ * Built: Fri, 08 Sep 2023 19:25:11 GMT
  */
  
  

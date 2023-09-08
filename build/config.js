@@ -6,11 +6,11 @@ import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 import {
   terser
-} from 'rollup-plugin-terser';
+} from 'rollup-plugin-terser'; // Rollup plugin to minify generated es bundle
 
-const pkg = JSON.parse(readFileSync('./package.json', 'utf-8'));
-const external = Object.keys(pkg.dependencies);
-const globals = {};
+const pkg = JSON.parse(readFileSync('./package.json', 'utf-8')),
+  external = Object.keys(pkg.dependencies),
+  globals = {};
 
 const openlayers = [
   ['ol/control/Control', 'ol.control.Control'],
@@ -33,7 +33,7 @@ const banner = readFileSync('./build/banner.js', 'utf-8')
   .replace('{description}', pkg.description)
   .replace('{homepage}', pkg.homepage)
   .replace('{version}', pkg.version)
-  .replace('{time}', new Date());
+  .replace('{time}', new Date().toUTCString());
 
 export default [{
     external,
